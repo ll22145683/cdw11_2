@@ -1483,9 +1483,9 @@ def eighteenthirty(x, y):
     x = 50
     y = 0
     degree = 20
-    first_degree = 20.78
-    startx = -233.06+100
-    starty = 49.48
+    first_degree = 20.78+90
+    startx = -50
+    starty = -150
     repeat = 360 / degree
     # 先畫出左邊第一關鍵節
     outstring = '''
@@ -1506,10 +1506,10 @@ x1, y1 = mychain.basic_rot('''+str(startx)+","+str(starty)+", "+str(first_degree
     # 接著處理右邊的非虛擬鍊條
     # 先畫出右邊第一關鍵節
  
-    p = -17.89+100
-    k = 93.98
+    p = -94.5
+    k = 67.5
     degree = 12
-    first_degree = 4.78
+    first_degree = 4.78+90
     repeat = 360 / degree
     # 第1節不是 virtual chain
     outstring += '''
@@ -1527,7 +1527,7 @@ p1, k1 = mychain.basic_rot('''+str(p)+","+str(k)+", "+str(first_degree)+''')
  
     # 上段連接直線
     # 從 x1, y1 作為起點
-    first_degree = 10.78
+    first_degree = 10.78+90
     repeat = 10
     outstring += '''
 m1, n1 = mychain.basic_rot(x1, y1, '''+str(first_degree)+''')
@@ -1537,7 +1537,7 @@ m1, n1 = mychain.basic_rot(x1, y1, '''+str(first_degree)+''')
  
     # 下段連接直線
     # 從 x11, y11 作為起點
-    first_degree = -10.78
+    first_degree = -10.78+90
     repeat = 10
     outstring += '''
 r1, s1 = mychain.basic_rot(x11, y11, '''+str(first_degree)+''')
@@ -1742,9 +1742,9 @@ spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3+(180-180/n2)*n2/n3)
 '''
     return outstring
 
-@bg7_40323216.route('/task16_19_2', defaults={'n1':15,'n2':20,'n3':18})
-@bg7_40323216.route('/task16_19_2/<n1>/<n2>/<n3>')
-def task16_19_2(n1,n2,n3):
+@bg7_40323216.route('/task16_19_2', defaults={'n1':15,'n2':20,'n3':18,'n4':20})
+@bg7_40323216.route('/task16_19_2/<n1>/<n2>/<n3>/<n4>')
+def task16_19_2(n1,n2,n3,n4):
     outstring = '''
 <!DOCTYPE html>
 <html>
@@ -1851,17 +1851,19 @@ def spur(cx, cy, m, n, pa, theta):
 n1 = '''+str(n1)+'''
 n2 = '''+str(n2)+'''
 n3 = '''+str(n3)+'''
+n4 = '''+str(n4)+'''
  
 # m 為模數, 根據畫布的寬度, 計算適合的模數大小
 # Module = mm of pitch diameter per tooth
 # 利用 80% 的畫布寬度進行繪圖
 # 計算模數的對應尺寸
-m = canvas.width*0.8/(n1+n2+n3)
+m = canvas.width*0.8/(n1+n2+n3+n4)
  
 # 根據齒數與模組計算各齒輪的節圓半徑
 pr1 = n1*m/2
 pr2 = n2*m/2
 pr3 = n3*m/2
+pr4 = n4*m/2
  
 # 畫布左右兩側都保留畫布寬度的 10%
 # 依此計算對應的最左邊齒輪的軸心座標
@@ -1882,6 +1884,7 @@ spur(cx+pr1+pr2, cy, m, n2, pa, 180-180/n2)
 # 但是第2齒為了與第一齒囓合時, 已經從原始定位線轉了 180-180/n2 度
 # 而當第2齒從與第3齒囓合的定位線, 逆時鐘旋轉 180-180/n2 角度後, 原先囓合的第3齒必須要再配合旋轉 (180-180/n2 )*n2/n3
 spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3+(180-180/n2)*n2/n3)
+spur(cx+pr1+pr2+pr2+pr3+pr3+pr4, cy, m, n4, pa, 180-180/n4+(180-180/n3)*n3/n4+180-180/n4)
 </script>
 </body></html>
 '''

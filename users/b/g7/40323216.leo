@@ -44,7 +44,7 @@
 <v t="leo.20160526111141.1"><vh>task5_26_2</vh></v>
 </v>
 </v>
-<v t="amd.20160501221015.1" a="E"><vh>@path ./../../../</vh>
+<v t="amd.20160501221015.1"><vh>@path ./../../../</vh>
 <v t="amd.20160501221001.1" a="E"><vh>@clean myflaskapp.py</vh>
 <v t="amd.20160501221001.2"><vh>myflaskapp declarations</vh></v>
 <v t="amd.20160501221001.3"><vh>index</vh></v>
@@ -63,12 +63,6 @@
 <v t="amd.20160501221001.16"><vh>send_static</vh></v>
 <v t="amd.20160501230850.1"><vh>send_blog</vh></v>
 <v t="amd.20160501225844.1"><vh>send_file</vh></v>
-</v>
-</v>
-<v t="leo.20160519093900.1" a="E"><vh>Recovered Nodes</vh>
-<v t="leo.20160519093900.2" a="E"><vh>Recovered node "myflaskapp declarations" from @clean myflaskapp.py</vh>
-<v t="leo.20160519093900.3"><vh>old:myflaskapp declarations</vh></v>
-<v t="leo.20160519093900.4"><vh>new:myflaskapp declarations</vh></v>
 </v>
 </v>
 </vnodes>
@@ -1401,284 +1395,6 @@ mychain.basic(x10, y10, x1, y1, color="green")
     
 
 </t>
-<t tx="leo.20160519093900.1"></t>
-<t tx="leo.20160519093900.2">(uncached) amd.20160501221001.2
-Diff...
-  # coding: utf-8
-  from flask import Flask, send_from_directory, request, redirect, render_template, session, make_response
-  import random
-  import math
-  import os
-  # init.py 為自行建立的起始物件
-  import init
-  import users.a.g1.ag1_40323105
-  import users.a.g2.ag2_40323120
-  import users.a.g10.ag10_40323129_task1
-  import users.a.g10.ag10_40323141_task1
-  import users.a.g10.ag10_40323139
-  import users.a.g9.ag9_40323132task
-  import users.a.g5.ag5_40323113task1
-- import users.a.g5.ag5_40123145task1
-  import users.a.g4.ag4_40323138
-  import users.a.g4.ag4_40323138_task2bacd
-  import users.a.g4.ag4_40323138_task3abcd
-  import users.a.g8.ag8_40323131_task1
-  import users.b.g9.bg9_40323250
-  import users.a.g8.ag8_40323123
-  #bg1
-  import users.b.g1.bg1_40123156
-  import users.b.g1.bg1_40123156_2
-  import users.b.g1.bg1_40123144
-  import users.b.g1.bg1_40123144_2
-- import users.b.g1.bg1_40123131
-- import users.b.g1.bg1_40123131_2
-  
-  #bg2
-  import users.b.g2.bg2_40123235
-  import users.b.g2.bg2_40123202
-  #bg4
-  import users.b.g4.bg4_40323203
-  #bg8
-  import users.b.g8.bg8_40323213
-  import users.b.g4.bg4_40323202
-  import users.b.g4.b40323201_cdw11
-  #bg5
-  import users.b.g5.b40323206_cdw11_1
-  import users.b.g5.b40323204_cdw11_1
-  import users.b.g4.bg4_40323205
-  
-  #bg5
-  import users.b.g5.b40323206_cdw11_1
-  import users.b.g5.b40323204_cdw11_1
-  import users.b.g5.b40323204_cdw11_2
-  import users.b.g5.b40323206_cdw11_2
-  #bg11
-  import users.b.g11.bg11_40323245
-  import users.b.g11.bg11_40323252
-  #bg101
-  import users.b.g101.b40123200
-- #ag8
-- import users.a.g8.a40323143
-- import users.a.g8.a40323154
-- #ag10
-- import users.a.g10.a40323139
-- import users.a.g10.a40323141
-- 
-- #ag100
-- import users.a.g100.cdw13.a40123100
-  # 確定程式檔案所在目錄, 在 Windows 有最後的反斜線
-  _curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
-  # 設定在雲端與近端的資料儲存目錄
-  if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
-      # 表示程式在雲端執行
-      data_dir = os.environ['OPENSHIFT_DATA_DIR']
-      static_dir = os.environ['OPENSHIFT_REPO_DIR']+"/static"
-      download_dir = os.environ['OPENSHIFT_DATA_DIR']+"/downloads"
-  else:
-      # 表示程式在近端執行
-      data_dir = _curdir + "/local_data/"
-      static_dir = _curdir + "/static"
-      download_dir = _curdir + "/local_data/downloads/"
-  
-  # 利用 init.py 啟動, 建立所需的相關檔案
-  initobj = init.Init()
-  
-  # 必須先將 download_dir 設為 static_folder, 然後才可以用於 download 方法中的 app.static_folder 的呼叫
-  app = Flask(__name__)
-  #app.config['download_dir'] = download_dir
-  
-  # 使用 session 必須要設定 secret_key
-  # In order to use sessions you have to set a secret key
-  # set the secret key.  keep this really secret:
-  app.secret_key = 'A0Zr9@8j/3yX R~XHH!jmN]LWX/,?R@T'
-  
-  
-  
-  
-  
-  
-  
-+ 
-</t>
-<t tx="leo.20160519093900.3"># coding: utf-8
-from flask import Flask, send_from_directory, request, redirect, render_template, session, make_response
-import random
-import math
-import os
-# init.py 為自行建立的起始物件
-import init
-import users.a.g1.ag1_40323105
-import users.a.g2.ag2_40323120
-import users.a.g10.ag10_40323129_task1
-import users.a.g10.ag10_40323141_task1
-import users.a.g10.ag10_40323139
-import users.a.g9.ag9_40323132task
-import users.a.g5.ag5_40323113task1
-import users.a.g4.ag4_40323138
-import users.a.g4.ag4_40323138_task2bacd
-import users.a.g4.ag4_40323138_task3abcd
-import users.a.g8.ag8_40323131_task1
-import users.b.g9.bg9_40323250
-import users.a.g8.ag8_40323123
-#bg1
-import users.b.g1.bg1_40123156
-import users.b.g1.bg1_40123156_2
-import users.b.g1.bg1_40123144
-import users.b.g1.bg1_40123144_2
-
-#bg2
-import users.b.g2.bg2_40123235
-import users.b.g2.bg2_40123202
-#bg4
-import users.b.g4.bg4_40323203
-#bg8
-import users.b.g8.bg8_40323213
-import users.b.g4.bg4_40323202
-import users.b.g4.b40323201_cdw11
-#bg5
-import users.b.g5.b40323206_cdw11_1
-import users.b.g5.b40323204_cdw11_1
-import users.b.g4.bg4_40323205
-
-#bg5
-import users.b.g5.b40323206_cdw11_1
-import users.b.g5.b40323204_cdw11_1
-import users.b.g5.b40323204_cdw11_2
-import users.b.g5.b40323206_cdw11_2
-#bg11
-import users.b.g11.bg11_40323245
-import users.b.g11.bg11_40323252
-#bg101
-import users.b.g101.b40123200
-# 確定程式檔案所在目錄, 在 Windows 有最後的反斜線
-_curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
-# 設定在雲端與近端的資料儲存目錄
-if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
-    # 表示程式在雲端執行
-    data_dir = os.environ['OPENSHIFT_DATA_DIR']
-    static_dir = os.environ['OPENSHIFT_REPO_DIR']+"/static"
-    download_dir = os.environ['OPENSHIFT_DATA_DIR']+"/downloads"
-else:
-    # 表示程式在近端執行
-    data_dir = _curdir + "/local_data/"
-    static_dir = _curdir + "/static"
-    download_dir = _curdir + "/local_data/downloads/"
-
-# 利用 init.py 啟動, 建立所需的相關檔案
-initobj = init.Init()
-
-# 必須先將 download_dir 設為 static_folder, 然後才可以用於 download 方法中的 app.static_folder 的呼叫
-app = Flask(__name__)
-#app.config['download_dir'] = download_dir
-
-# 使用 session 必須要設定 secret_key
-# In order to use sessions you have to set a secret key
-# set the secret key.  keep this really secret:
-app.secret_key = 'A0Zr9@8j/3yX R~XHH!jmN]LWX/,?R@T'
-
-
-
-
-
-
-
-
-</t>
-<t tx="leo.20160519093900.4"># coding: utf-8
-from flask import Flask, send_from_directory, request, redirect, render_template, session, make_response
-import random
-import math
-import os
-# init.py 為自行建立的起始物件
-import init
-import users.a.g1.ag1_40323105
-import users.a.g2.ag2_40323120
-import users.a.g10.ag10_40323129_task1
-import users.a.g10.ag10_40323141_task1
-import users.a.g10.ag10_40323139
-import users.a.g9.ag9_40323132task
-import users.a.g5.ag5_40323113task1
-import users.a.g5.ag5_40123145task1
-import users.a.g4.ag4_40323138
-import users.a.g4.ag4_40323138_task2bacd
-import users.a.g4.ag4_40323138_task3abcd
-import users.a.g8.ag8_40323131_task1
-import users.b.g9.bg9_40323250
-import users.a.g8.ag8_40323123
-#bg1
-import users.b.g1.bg1_40123156
-import users.b.g1.bg1_40123156_2
-import users.b.g1.bg1_40123144
-import users.b.g1.bg1_40123144_2
-import users.b.g1.bg1_40123131
-import users.b.g1.bg1_40123131_2
-
-#bg2
-import users.b.g2.bg2_40123235
-import users.b.g2.bg2_40123202
-#bg4
-import users.b.g4.bg4_40323203
-#bg8
-import users.b.g8.bg8_40323213
-import users.b.g4.bg4_40323202
-import users.b.g4.b40323201_cdw11
-#bg5
-import users.b.g5.b40323206_cdw11_1
-import users.b.g5.b40323204_cdw11_1
-import users.b.g4.bg4_40323205
-
-#bg5
-import users.b.g5.b40323206_cdw11_1
-import users.b.g5.b40323204_cdw11_1
-import users.b.g5.b40323204_cdw11_2
-import users.b.g5.b40323206_cdw11_2
-#bg11
-import users.b.g11.bg11_40323245
-import users.b.g11.bg11_40323252
-#bg101
-import users.b.g101.b40123200
-#ag8
-import users.a.g8.a40323143
-import users.a.g8.a40323154
-#ag10
-import users.a.g10.a40323139
-import users.a.g10.a40323141
-
-#ag100
-import users.a.g100.cdw13.a40123100
-# 確定程式檔案所在目錄, 在 Windows 有最後的反斜線
-_curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
-# 設定在雲端與近端的資料儲存目錄
-if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
-    # 表示程式在雲端執行
-    data_dir = os.environ['OPENSHIFT_DATA_DIR']
-    static_dir = os.environ['OPENSHIFT_REPO_DIR']+"/static"
-    download_dir = os.environ['OPENSHIFT_DATA_DIR']+"/downloads"
-else:
-    # 表示程式在近端執行
-    data_dir = _curdir + "/local_data/"
-    static_dir = _curdir + "/static"
-    download_dir = _curdir + "/local_data/downloads/"
-
-# 利用 init.py 啟動, 建立所需的相關檔案
-initobj = init.Init()
-
-# 必須先將 download_dir 設為 static_folder, 然後才可以用於 download 方法中的 app.static_folder 的呼叫
-app = Flask(__name__)
-#app.config['download_dir'] = download_dir
-
-# 使用 session 必須要設定 secret_key
-# In order to use sessions you have to set a secret key
-# set the secret key.  keep this really secret:
-app.secret_key = 'A0Zr9@8j/3yX R~XHH!jmN]LWX/,?R@T'
-
-
-
-
-
-
-
-</t>
 <t tx="leo.20160519095553.1">@bg7_40323216.route('/task16_19/&lt;x&gt;')
 def task16_19():
     outstring = '''
@@ -2274,9 +1990,9 @@ def eighteenthirty(x, y):
     x = 50
     y = 0
     degree = 20
-    first_degree = 20.78
-    startx = -233.06+100
-    starty = 49.48
+    first_degree = 20.78+90
+    startx = -50
+    starty = -150
     repeat = 360 / degree
     # 先畫出左邊第一關鍵節
     outstring = '''
@@ -2297,10 +2013,10 @@ x1, y1 = mychain.basic_rot('''+str(startx)+","+str(starty)+", "+str(first_degree
     # 接著處理右邊的非虛擬鍊條
     # 先畫出右邊第一關鍵節
  
-    p = -17.89+100
-    k = 93.98
+    p = -94.5
+    k = 67.5
     degree = 12
-    first_degree = 4.78
+    first_degree = 4.78+90
     repeat = 360 / degree
     # 第1節不是 virtual chain
     outstring += '''
@@ -2318,7 +2034,7 @@ p1, k1 = mychain.basic_rot('''+str(p)+","+str(k)+", "+str(first_degree)+''')
  
     # 上段連接直線
     # 從 x1, y1 作為起點
-    first_degree = 10.78
+    first_degree = 10.78+90
     repeat = 10
     outstring += '''
 m1, n1 = mychain.basic_rot(x1, y1, '''+str(first_degree)+''')
@@ -2328,7 +2044,7 @@ m1, n1 = mychain.basic_rot(x1, y1, '''+str(first_degree)+''')
  
     # 下段連接直線
     # 從 x11, y11 作為起點
-    first_degree = -10.78
+    first_degree = -10.78+90
     repeat = 10
     outstring += '''
 r1, s1 = mychain.basic_rot(x11, y11, '''+str(first_degree)+''')
@@ -2534,9 +2250,9 @@ spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3+(180-180/n2)*n2/n3)
     return outstring
 
 </t>
-<t tx="leo.20160526111141.1">@bg7_40323216.route('/task16_19_2', defaults={'n1':15,'n2':20,'n3':18})
-@bg7_40323216.route('/task16_19_2/&lt;n1&gt;/&lt;n2&gt;/&lt;n3&gt;')
-def task16_19_2(n1,n2,n3):
+<t tx="leo.20160526111141.1">@bg7_40323216.route('/task16_19_2', defaults={'n1':15,'n2':20,'n3':18,'n4':20})
+@bg7_40323216.route('/task16_19_2/&lt;n1&gt;/&lt;n2&gt;/&lt;n3&gt;/&lt;n4&gt;')
+def task16_19_2(n1,n2,n3,n4):
     outstring = '''
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -2643,17 +2359,19 @@ def spur(cx, cy, m, n, pa, theta):
 n1 = '''+str(n1)+'''
 n2 = '''+str(n2)+'''
 n3 = '''+str(n3)+'''
+n4 = '''+str(n4)+'''
  
 # m 為模數, 根據畫布的寬度, 計算適合的模數大小
 # Module = mm of pitch diameter per tooth
 # 利用 80% 的畫布寬度進行繪圖
 # 計算模數的對應尺寸
-m = canvas.width*0.8/(n1+n2+n3)
+m = canvas.width*0.8/(n1+n2+n3+n4)
  
 # 根據齒數與模組計算各齒輪的節圓半徑
 pr1 = n1*m/2
 pr2 = n2*m/2
 pr3 = n3*m/2
+pr4 = n4*m/2
  
 # 畫布左右兩側都保留畫布寬度的 10%
 # 依此計算對應的最左邊齒輪的軸心座標
@@ -2674,6 +2392,7 @@ spur(cx+pr1+pr2, cy, m, n2, pa, 180-180/n2)
 # 但是第2齒為了與第一齒囓合時, 已經從原始定位線轉了 180-180/n2 度
 # 而當第2齒從與第3齒囓合的定位線, 逆時鐘旋轉 180-180/n2 角度後, 原先囓合的第3齒必須要再配合旋轉 (180-180/n2 )*n2/n3
 spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3+(180-180/n2)*n2/n3)
+spur(cx+pr1+pr2+pr2+pr3+pr3+pr4, cy, m, n4, pa, 180-180/n4+(180-180/n3)*n3/n4+180-180/n4)
 &lt;/script&gt;
 &lt;/body&gt;&lt;/html&gt;
 '''
