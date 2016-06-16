@@ -8,7 +8,7 @@ import init
 
 #bg7
 import users.b.g7.bg7_40323216
-
+import users.b.g7.bg7_40323216_2
 
 #ag100
 import users.a.g100.cdw13.a40123100
@@ -382,3 +382,4 @@ def send_file(path):
 if __name__ == "__main__":
     app.run()
 app.register_blueprint(users.b.g7.bg7_40323216.bg7_40323216)
+app.register_blueprint(users.b.g7.bg7_40323216_2.bg7_40323216_2)
