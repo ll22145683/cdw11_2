@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>CDW11 網頁 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/bg7.atom.xml" rel="self"></link><id>./</id><updated>2016-06-16T10:22:08+08:00</updated><entry><title>40323216 cdw14報告</title><link href="./40323216-cdw14bao-gao.html" rel="alternate"></link><updated>2016-06-16T10:22:08+08:00</updated><author><name>40323216</name></author><id>tag:,2016-06-16:./40323216-cdw14bao-gao.html</id><summary type="html">&lt;p&gt;cdw14心得 :&lt;br /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CDW11 網頁 (虎尾科大MDE)</title><link href="http://cdw11-ag100.rhcloud.com/static/blog/" rel="alternate"></link><link href="http://cdw11-ag100.rhcloud.com/static/blog/feeds/bg7.atom.xml" rel="self"></link><id>http://cdw11-ag100.rhcloud.com/static/blog/</id><updated>2016-06-16T10:22:08+08:00</updated><entry><title>40323216 cdw14報告</title><link href="http://cdw11-ag100.rhcloud.com/static/blog/40323216-cdw14bao-gao.html" rel="alternate"></link><updated>2016-06-16T10:22:08+08:00</updated><author><name>40323216</name></author><id>tag:cdw11-ag100.rhcloud.com,2016-06-16:static/blog/40323216-cdw14bao-gao.html</id><summary type="html">&lt;p&gt;cdw14心得 :&lt;br /&gt;
 
 &lt;h3&gt;在最後的課程 需要把齒輪數增加到4個 並且要讓他們可以自由改變齒數 一開始在修改程式的時候一直碰壁 後來才慢慢了解到程式的多變性。&lt;/h3&gt;
 &lt;br/&gt;
 &lt;h3&gt;on shape上畫齒輪要用他的模組畫&lt;h3&gt;
 &lt;h3&gt;on shape網址:"https://cad.onshape.com/documents/d4aa946b5d70ef6824700fc5/w/827648b3d11bd49c1f495d6c/e/6926c62bb6bfe5e68f0df90b"&lt;h3&gt;
 &lt;h3&gt;完成圖:&lt;/h3&gt;
-&lt;img src="http://cdw11-ag100.rhcloud.com/local_data/bg7/40323216_1016_6_16.png" width="100%" /&gt;&lt;/p&gt;</summary><category term="40323216"></category></entry><entry><title>40323216 cdw11報告</title><link href="./40323216-cdw11bao-gao.html" rel="alternate"></link><updated>2016-06-16T09:32:36+08:00</updated><author><name>40323216</name></author><id>tag:,2016-06-16:./40323216-cdw11bao-gao.html</id><summary type="html">&lt;p&gt;cdw11心得 :&lt;br /&gt;
+&lt;img src="http://cdw11-ag100.rhcloud.com/local_data/bg7/40323216_1016_6_16.png" width="100%" /&gt;&lt;/p&gt;</summary><category term="40323216"></category></entry><entry><title>40323216 cdw11報告</title><link href="http://cdw11-ag100.rhcloud.com/static/blog/40323216-cdw11bao-gao.html" rel="alternate"></link><updated>2016-06-16T09:32:36+08:00</updated><author><name>40323216</name></author><id>tag:cdw11-ag100.rhcloud.com,2016-06-16:static/blog/40323216-cdw11bao-gao.html</id><summary type="html">&lt;p&gt;cdw11心得 :&lt;br /&gt;
 
 &lt;h3&gt;利用老師開放之鍊條程式碼，嘗試做出兩個鍊條，並能透過6個參數調整外角、x座標及y座標。&lt;/h3&gt;
 &lt;br/&gt;
@@ -14,7 +14,7 @@
 &lt;br/&gt;
 &lt;h3&gt;可以修改X Y 座標的予寫死的程式差滿多的。&lt;/h3&gt;
 &lt;br/&gt;
-&lt;h3&gt;完成圖:&lt;/h3&gt;&lt;/p&gt;</summary><category term="40323216"></category></entry><entry><title>40323216 cdw13報告</title><link href="./40323216-cdw13bao-gao.html" rel="alternate"></link><updated>2016-06-16T09:32:36+08:00</updated><author><name>40323216</name></author><id>tag:,2016-06-16:./40323216-cdw13bao-gao.html</id><summary type="html">&lt;p&gt;cdw11心得 :&lt;br /&gt;
+&lt;h3&gt;完成圖:&lt;/h3&gt;&lt;/p&gt;</summary><category term="40323216"></category></entry><entry><title>40323216 cdw13報告</title><link href="http://cdw11-ag100.rhcloud.com/static/blog/40323216-cdw13bao-gao.html" rel="alternate"></link><updated>2016-06-16T09:32:36+08:00</updated><author><name>40323216</name></author><id>tag:cdw11-ag100.rhcloud.com,2016-06-16:static/blog/40323216-cdw13bao-gao.html</id><summary type="html">&lt;p&gt;cdw11心得 :&lt;br /&gt;
 
 &lt;h3&gt;劃出水平的鏈條以及垂直的鏈條並可以用圖片倒出程式&lt;/h3&gt;
 &lt;br/&gt;
